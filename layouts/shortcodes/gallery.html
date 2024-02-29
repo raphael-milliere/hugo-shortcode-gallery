@@ -108,14 +108,6 @@ Ordinal: {{ .Ordinal}}
 				{{ end }}
 			{{ end }}
 
-
-			<!-- {{/* Correct orientation of the image, this is needed for thumbnails (and downscaled gallery images)
-				 if the EXIF informations contains an orientation value. See issue #22. */}}
-			{{ $rotated := $original.Filter images.AutoOrient }} -->
-<!-- 
-			{{/* Create thumbnail, rotate it if needed */}}
-			{{ $thumbnail := ($rotated.Fit $thumbnailResizeOptions) }} -->
-
 			{{/* Create thumbnail */}}
 			{{ $thumbnail := ($original.Fit $thumbnailResizeOptions) }}
 
@@ -123,8 +115,6 @@ Ordinal: {{ .Ordinal}}
 			<div>
 				{{ $full := "" }}
 				{{ if $imageResizeOptions }}
-					<!-- {{/* Downscale gallery image, rotate it if needed */}}
-					{{ $full = ($rotated.Fit $imageResizeOptions) }} -->
 					{{/* Downscale gallery image */}}
 					{{ $full = ($original.Fit $imageResizeOptions) }}
 				{{ else }}
