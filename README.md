@@ -22,7 +22,7 @@ First make sure that your project itself is a [hugo module](https://gohugo.io/hu
 Then add these two lines to your hugo.toml (or [config.toml](https://github.com/gohugoio/hugo/issues/8979)) configuration file:
 ```
 [[module.imports]]
-path = "github.com/mfg92/hugo-shortcode-gallery"
+path = "github.com/raphael-milliere/hugo-shortcode-gallery"
 ```
 
 On the first start of Hugo it will download the required files.
@@ -36,7 +36,7 @@ hugo mod get -u
 Clone this git repository into your *themes* folder. 
 
 ```
-git clone https://github.com/mfg92/hugo-shortcode-gallery.git
+git clone https://github.com/raphael-milliere/hugo-shortcode-gallery.git
 ```
 
 Next edit your projects 
